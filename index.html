@@ -20,7 +20,7 @@
 
 body{
     background:#090611;
-    color:white;
+    color:#fff;
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -34,8 +34,8 @@ body{
     inset:0;
     z-index:-2;
     background:
-        radial-gradient(circle at 15% 20%,rgba(138,43,226,.28),transparent 32%),
-        radial-gradient(circle at 85% 80%,rgba(255,105,180,.18),transparent 32%),
+        radial-gradient(circle at 15% 20%,rgba(138,43,226,.30),transparent 32%),
+        radial-gradient(circle at 85% 80%,rgba(255,105,180,.20),transparent 32%),
         #090611;
 }
 
@@ -73,7 +73,7 @@ h1,h2{
 }
 
 h1{
-    font-size:1.6rem;
+    font-size:1.55rem;
 }
 
 h2{
@@ -125,6 +125,11 @@ textarea{
     color:white;
     outline:none;
     margin-bottom:12px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#887b91;
 }
 
 textarea{
@@ -192,12 +197,11 @@ textarea{
     margin-top:22px;
     padding:18px 12px;
     border-radius:20px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(138,43,226,.12),
-            rgba(255,105,180,.06)
-        );
+    background:linear-gradient(
+        145deg,
+        rgba(138,43,226,.12),
+        rgba(255,105,180,.06)
+    );
     border:1px solid rgba(216,150,255,.35);
     overflow:hidden;
 }
@@ -232,7 +236,9 @@ textarea{
     object-fit:cover;
     opacity:0;
     transform:scale(1.08);
-    transition:opacity 1s ease,transform 5s ease;
+    transition:
+        opacity 1s ease,
+        transform 5s ease;
     border-radius:17px;
 }
 
@@ -269,7 +275,7 @@ textarea{
     line-height:1.5;
 }
 
-/* VISITORS */
+/* VISITOR WALL */
 
 .visitors{
     margin-top:20px;
@@ -286,19 +292,18 @@ textarea{
     margin-bottom:10px;
 }
 
-#visitorList{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-}
-
 .visitor{
-    padding:9px;
+    padding:10px;
+    margin-bottom:8px;
     border-radius:10px;
     background:rgba(0,0,0,.22);
     color:#ddd;
     font-size:.75rem;
     animation:visitorIn .4s ease;
+}
+
+.visitor:last-child{
+    margin-bottom:0;
 }
 
 @keyframes visitorIn{
@@ -388,6 +393,7 @@ textarea{
 }
 
 @media(max-width:380px){
+
     .card{
         padding:23px 17px;
     }
@@ -407,13 +413,16 @@ textarea{
 
 <div class="bg"></div>
 
+
 <!-- SCREEN 1 -->
 
 <section id="screen1" class="card active">
 
     <h1>💜 WELCOME, BTS ARMY 💜</h1>
 
-    <p>Jungkook's Birthday Celebration</p>
+    <p>
+        Jungkook's Birthday Celebration
+    </p>
 
     <p>
         A little birthday surprise made with love
@@ -431,13 +440,23 @@ textarea{
 
 <section id="screen2" class="card">
 
-    <h2>Tell us your name, ARMY 💜</h2>
+    <h2>
+        Tell us your name, ARMY 💜
+    </h2>
 
     <input
         id="name"
         type="text"
         maxlength="20"
         placeholder="Enter your name..."
+        autocomplete="off"
+    >
+
+    <input
+        id="username"
+        type="text"
+        maxlength="30"
+        placeholder="@Instagram username (optional)"
         autocomplete="off"
     >
 
@@ -448,6 +467,10 @@ textarea{
     <button onclick="saveName()">
         CONTINUE ✨
     </button>
+
+    <p style="font-size:.68rem;color:#8f8398;">
+        Your name and username may appear in the public ARMY visitor wall.
+    </p>
 
 </section>
 
@@ -475,7 +498,9 @@ textarea{
 
 <section id="screen4" class="card">
 
-    <h2>JEON JUNGKOOK</h2>
+    <h2>
+        JEON JUNGKOOK
+    </h2>
 
     <div class="date">
         🎂 1 SEPTEMBER 2026 🎂
@@ -491,7 +516,9 @@ textarea{
     >
 
 
-    <h3>HAPPY BIRTHDAY, JK! 💜</h3>
+    <h3>
+        HAPPY BIRTHDAY, JK! 💜
+    </h3>
 
     <p>
         Happy Birthday, Jungkook! 🎂💜
@@ -553,33 +580,42 @@ textarea{
 
         <div class="photo-slider">
 
-            <!-- GitHub images -->
+            <!-- FRIEND 1 -->
 
             <img
                 class="army-photo show"
                 src="army1.jpg"
-                alt="Jung Hoseok"
+                alt="Army Friend 1"
                 data-name="@hope_world_84"
             >
+
+
+            <!-- FRIEND 2 -->
 
             <img
                 class="army-photo"
                 src="army2.jpg"
-                alt="Lily"
+                alt="Army Friend 2"
                 data-name="@mishri_sen_"
             >
+
+
+            <!-- FRIEND 3 -->
 
             <img
                 class="army-photo"
                 src="army3.jpg"
-                alt="Scripter"
+                alt="Army Friend 3"
                 data-name="@scripter__the.genius"
             >
+
+
+            <!-- FRIEND 4 -->
 
             <img
                 class="army-photo"
                 src="army4.jpg"
-                alt="Aashiq-e-Nazar"
+                alt="Army Friend 4"
                 data-name="@hahaaa.fake"
             >
 
@@ -617,9 +653,11 @@ textarea{
         </div>
 
         <div id="visitorList">
+
             <div class="visitor">
                 Loading ARMY visitors... ✨
             </div>
+
         </div>
 
     </div>
@@ -650,7 +688,9 @@ textarea{
 
         <br>
 
-        <strong>our purple heart 💜</strong>
+        <strong>
+            our purple heart 💜
+        </strong>
 
         <br><br>
 
@@ -676,7 +716,10 @@ textarea{
         💜 SHOW MY WISH
     </button>
 
-    <div id="wishPreview" class="wish-preview"></div>
+    <div
+        id="wishPreview"
+        class="wish-preview"
+    ></div>
 
 
     <!-- SHARE -->
@@ -686,7 +729,7 @@ textarea{
     </button>
 
 
-    <!-- AD PLACEHOLDER -->
+    <!-- AD -->
 
     <div class="ad">
         ADVERTISEMENT
@@ -736,7 +779,7 @@ textarea{
 </a>
 
 
-<!-- MUSIC -->
+<!-- MUSIC FILE -->
 
 <audio
     id="birthdayMusic"
@@ -750,7 +793,9 @@ textarea{
 </audio>
 
 
-<!-- FIREBASE -->
+<!-- =====================================================
+     FIREBASE
+===================================================== -->
 
 <script type="module">
 
@@ -768,10 +813,12 @@ import {
 from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
 
+/* FIREBASE CONFIG */
+
 const firebaseConfig = {
 
     apiKey:
-        "AIzaSyDc9gWel3OFBcrGpqY_NyYGYGuawERVyEk",
+        "AIzaSyDc9gWel3OFBrcGpqY_NyYGYGuawERVyEk",
 
     authDomain:
         "jk-birthday-army.firebaseapp.com",
@@ -793,14 +840,20 @@ const firebaseConfig = {
 };
 
 
-const app = initializeApp(firebaseConfig);
+const app =
+    initializeApp(firebaseConfig);
 
-const db = getDatabase(app);
+
+const db =
+    getDatabase(app);
 
 
 /* SAVE VISITOR */
 
-window.saveVisitor = async function(name){
+window.saveVisitor = async function(
+    name,
+    username
+){
 
     try{
 
@@ -808,6 +861,7 @@ window.saveVisitor = async function(name){
             ref(db,"visitors"),
             {
                 name:name,
+                username:username || "",
                 time:Date.now()
             }
         );
@@ -817,7 +871,10 @@ window.saveVisitor = async function(name){
     }
     catch(error){
 
-        console.log("Firebase error:",error);
+        console.error(
+            "Firebase error:",
+            error
+        );
 
     }
 
@@ -831,7 +888,7 @@ function loadVisitors(){
     const visitorsQuery =
         query(
             ref(db,"visitors"),
-            limitToLast(10)
+            limitToLast(15)
         );
 
 
@@ -840,7 +897,10 @@ function loadVisitors(){
         function(snapshot){
 
             const list =
-                document.getElementById("visitorList");
+                document.getElementById(
+                    "visitorList"
+                );
+
 
             list.innerHTML="";
 
@@ -859,25 +919,41 @@ function loadVisitors(){
             }
 
 
-            const arr =
-                Object.values(data).reverse();
+            const visitors =
+                Object.values(data)
+                .reverse();
 
 
-            arr.forEach(function(visitor){
+            visitors.forEach(
+                function(visitor){
 
-                const div =
-                    document.createElement("div");
+                    const div =
+                        document.createElement(
+                            "div"
+                        );
 
-                div.className="visitor";
 
-                div.textContent=
-                    "💜 "
-                    + visitor.name
-                    + " joined the celebration ✨";
+                    div.className="visitor";
 
-                list.appendChild(div);
 
-            });
+                    const username =
+                        visitor.username
+                        ? " • "
+                          + visitor.username
+                        : "";
+
+
+                    div.textContent =
+                        "💜 "
+                        + visitor.name
+                        + username
+                        + " joined the celebration ✨";
+
+
+                    list.appendChild(div);
+
+                }
+            );
 
         }
     );
@@ -890,15 +966,22 @@ loadVisitors();
 </script>
 
 
+<!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
 <script>
 
-/* DATE */
+/* BIRTHDAY DATE */
 
 const birthdayDate =
-    new Date("2026-09-01T00:00:00+05:30");
+    new Date(
+        "2026-09-01T00:00:00+05:30"
+    );
 
 
 let armyName="";
+let armyUsername="";
 
 
 /* NAVIGATION */
@@ -906,33 +989,48 @@ let armyName="";
 function next(from,to){
 
     document
-        .getElementById("screen"+from)
+        .getElementById(
+            "screen"+from
+        )
         .classList.remove("active");
 
 
-    setTimeout(function(){
+    setTimeout(
+        function(){
 
-        document
-            .getElementById("screen"+to)
-            .classList.add("active");
+            document
+                .getElementById(
+                    "screen"+to
+                )
+                .classList.add("active");
 
-    },100);
+        },
+        100
+    );
 
 }
 
 
-/* NAME */
+/* SAVE NAME */
 
 function saveName(){
 
     const input =
         document.getElementById("name");
 
+    const usernameInput =
+        document.getElementById("username");
+
     const error =
         document.getElementById("error");
 
+
     const value =
         input.value.trim();
+
+
+    const username =
+        usernameInput.value.trim();
 
 
     if(!value){
@@ -948,22 +1046,32 @@ function saveName(){
 
     error.style.display="none";
 
+
     armyName=value;
+
+    armyUsername=username;
 
 
     document
-        .getElementById("welcomeName")
-        .textContent=
+        .getElementById(
+            "welcomeName"
+        )
+        .textContent =
         "Welcome, "
         + armyName
         + " 💜";
 
 
-    /* Firebase visitor save */
+    /* FIREBASE */
 
-    if(window.saveVisitor){
+    if(
+        window.saveVisitor
+    ){
 
-        window.saveVisitor(armyName);
+        window.saveVisitor(
+            armyName,
+            armyUsername
+        );
 
     }
 
@@ -980,51 +1088,67 @@ function openBirthday(){
     next(3,4);
 
 
-    setTimeout(function(){
+    setTimeout(
+        function(){
 
-        confetti({
+            confetti({
 
-            particleCount:130,
+                particleCount:130,
 
-            spread:100,
+                spread:100,
 
-            origin:{
-                y:.6
-            }
+                origin:{
+                    y:.6
+                }
 
-        });
-
-
-        /* Try music */
-
-        const music =
-            document.getElementById("birthdayMusic");
+            });
 
 
-        music.play()
-        .then(function(){
+            /* MUSIC AUTOPLAY ATTEMPT */
 
-            document
-                .getElementById("musicBtn")
-                .textContent=
-                "⏸️ PAUSE MUSIC";
+            const music =
+                document.getElementById(
+                    "birthdayMusic"
+                );
 
-            document
-                .getElementById("musicStatus")
-                .textContent=
-                "Birthday music is playing 🎶💜";
 
-        })
-        .catch(function(){
+            music.play()
+            .then(
+                function(){
 
-            document
-                .getElementById("musicStatus")
-                .textContent=
-                "Tap PLAY MUSIC to start 🎵";
+                    document
+                        .getElementById(
+                            "musicBtn"
+                        )
+                        .textContent =
+                        "⏸️ PAUSE MUSIC";
 
-        });
 
-    },300);
+                    document
+                        .getElementById(
+                            "musicStatus"
+                        )
+                        .textContent =
+                        "Birthday music is playing 🎶💜";
+
+                }
+            )
+            .catch(
+                function(){
+
+                    document
+                        .getElementById(
+                            "musicStatus"
+                        )
+                        .textContent =
+                        "Tap PLAY MUSIC to start 🎵";
+
+                }
+            );
+
+        },
+        300
+    );
 
 }
 
@@ -1036,17 +1160,20 @@ function updateTimer(){
     const now =
         new Date();
 
+
     const diff =
-        birthdayDate-now;
+        birthdayDate - now;
 
 
     const timer =
-        document.getElementById("timer");
+        document.getElementById(
+            "timer"
+        );
 
 
-    if(diff<=0){
+    if(diff <= 0){
 
-        timer.innerHTML=
+        timer.innerHTML =
             "🎂 HAPPY BIRTHDAY JK! 💜";
 
         return;
@@ -1056,38 +1183,52 @@ function updateTimer(){
 
     const days =
         Math.floor(
-            diff/(1000*60*60*24)
+            diff /
+            (1000*60*60*24)
         );
 
 
     const hours =
         Math.floor(
-            diff/(1000*60*60)%24
+            diff /
+            (1000*60*60)
+            % 24
         );
 
 
     const minutes =
         Math.floor(
-            diff/(1000*60)%60
+            diff /
+            (1000*60)
+            % 60
         );
 
 
     const seconds =
         Math.floor(
-            diff/1000%60
+            diff /
+            1000
+            % 60
         );
 
 
-    timer.textContent=
-        days+" DAYS : "+
-        String(hours).padStart(2,"0")+" H : "+
-        String(minutes).padStart(2,"0")+" M : "+
-        String(seconds).padStart(2,"0")+" S";
+    timer.textContent =
+        days
+        + " DAYS : "
+        + String(hours).padStart(2,"0")
+        + " H : "
+        + String(minutes).padStart(2,"0")
+        + " M : "
+        + String(seconds).padStart(2,"0")
+        + " S";
 
 }
 
 
-setInterval(updateTimer,1000);
+setInterval(
+    updateTimer,
+    1000
+);
 
 updateTimer();
 
@@ -1095,13 +1236,21 @@ updateTimer();
 /* MUSIC */
 
 const music =
-    document.getElementById("birthdayMusic");
+    document.getElementById(
+        "birthdayMusic"
+    );
+
 
 const musicBtn =
-    document.getElementById("musicBtn");
+    document.getElementById(
+        "musicBtn"
+    );
+
 
 const musicStatus =
-    document.getElementById("musicStatus");
+    document.getElementById(
+        "musicStatus"
+    );
 
 
 async function toggleMusic(){
@@ -1112,31 +1261,33 @@ async function toggleMusic(){
 
             await music.play();
 
-            musicBtn.textContent=
+
+            musicBtn.textContent =
                 "⏸️ PAUSE MUSIC";
 
-            musicStatus.textContent=
+
+            musicStatus.textContent =
                 "Birthday music is playing 🎶💜";
 
         }
-
         catch(error){
 
-            musicStatus.textContent=
+            musicStatus.textContent =
                 "Music file not found. Check birthday.mp3.";
 
         }
 
     }
-
     else{
 
         music.pause();
 
-        musicBtn.textContent=
+
+        musicBtn.textContent =
             "▶️ PLAY MUSIC";
 
-        musicStatus.textContent=
+
+        musicStatus.textContent =
             "Music paused 🎵";
 
     }
@@ -1144,24 +1295,34 @@ async function toggleMusic(){
 }
 
 
-/* PHOTO SLIDER */
+/* FRIEND PHOTO SLIDER */
 
 const armyPhotos =
-    document.querySelectorAll(".army-photo");
+    document.querySelectorAll(
+        ".army-photo"
+    );
+
 
 const photoName =
-    document.getElementById("photoName");
+    document.getElementById(
+        "photoName"
+    );
+
 
 let currentPhoto=0;
 
 
 function showArmyPhoto(index){
 
-    armyPhotos.forEach(function(photo){
+    armyPhotos.forEach(
+        function(photo){
 
-        photo.classList.remove("show");
+            photo.classList.remove(
+                "show"
+            );
 
-    });
+        }
+    );
 
 
     armyPhotos[index]
@@ -1176,19 +1337,29 @@ function showArmyPhoto(index){
 }
 
 
-setInterval(function(){
+setInterval(
+    function(){
 
-    currentPhoto++;
+        currentPhoto++;
 
-    if(currentPhoto>=armyPhotos.length){
 
-        currentPhoto=0;
+        if(
+            currentPhoto >=
+            armyPhotos.length
+        ){
 
-    }
+            currentPhoto=0;
 
-    showArmyPhoto(currentPhoto);
+        }
 
-},4000);
+
+        showArmyPhoto(
+            currentPhoto
+        );
+
+    },
+    4000
+);
 
 
 /* SURPRISE */
@@ -1196,13 +1367,21 @@ setInterval(function(){
 function showSurprise(){
 
     const box =
-        document.getElementById("surprise");
+        document.getElementById(
+            "surprise"
+        );
 
 
-    box.classList.toggle("show");
+    box.classList.toggle(
+        "show"
+    );
 
 
-    if(box.classList.contains("show")){
+    if(
+        box.classList.contains(
+            "show"
+        )
+    ){
 
         confetti({
 
@@ -1227,30 +1406,35 @@ function showWish(){
 
     const text =
         document
-        .getElementById("wish")
+        .getElementById(
+            "wish"
+        )
         .value
         .trim();
 
 
     const preview =
-        document
-        .getElementById("wishPreview");
+        document.getElementById(
+            "wishPreview"
+        );
 
 
     if(!text){
 
-        preview.style.display="none";
+        preview.style.display =
+            "none";
 
         return;
 
     }
 
 
-    preview.textContent=
-        "💜 "+text;
+    preview.textContent =
+        "💜 " + text;
 
 
-    preview.style.display="block";
+    preview.style.display =
+        "block";
 
 }
 
@@ -1263,11 +1447,11 @@ async function shareWish(){
         window.location.href;
 
 
-    const shareText =
+    const nameText =
         armyName
-        ? "💜 "+armyName+
-          " is celebrating Jungkook's Birthday! 🎂✨ Come join BTS ARMY!"
-        : "🎂 Jungkook Birthday Celebration 💜 Come join BTS ARMY!";
+        ? armyName +
+          " is celebrating Jungkook's Birthday! 🎂💜"
+        : "Come celebrate Jungkook's Birthday with BTS ARMY! 🎂💜";
 
 
     const data={
@@ -1276,7 +1460,10 @@ async function shareWish(){
             "Jungkook Birthday Celebration 💜",
 
         text:
-            shareText,
+            "💜 "
+            + nameText
+            + "\n\n"
+            + "Join the ARMY celebration! ✨",
 
         url:url
 
@@ -1285,17 +1472,23 @@ async function shareWish(){
 
     try{
 
-        if(navigator.share){
+        if(
+            navigator.share
+        ){
 
-            await navigator.share(data);
+            await navigator.share(
+                data
+            );
 
         }
-
         else{
 
             await navigator.clipboard.writeText(
-                shareText+"\n"+url
+                data.text
+                + "\n"
+                + url
             );
+
 
             alert(
                 "Birthday website link copied! 💜"
@@ -1304,10 +1497,11 @@ async function shareWish(){
         }
 
     }
-
     catch(error){
 
-        console.log("Share cancelled.");
+        console.log(
+            "Share cancelled."
+        );
 
     }
 
