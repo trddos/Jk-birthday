@@ -9,7 +9,6 @@
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
@@ -34,32 +33,22 @@ body{
     position:fixed;
     inset:0;
     z-index:-2;
-
     background:
         radial-gradient(circle at 15% 20%,rgba(138,43,226,.28),transparent 32%),
         radial-gradient(circle at 85% 80%,rgba(255,105,180,.18),transparent 32%),
         #090611;
 }
 
-/* ---------- MAIN CARD ---------- */
-
 .card{
     display:none;
     width:92%;
     max-width:460px;
     padding:28px 23px;
-
     background:rgba(27,17,44,.94);
-
     border:1px solid rgba(180,100,255,.45);
-
     border-radius:24px;
-
-    box-shadow:
-        0 0 30px rgba(138,43,226,.28);
-
+    box-shadow:0 0 30px rgba(138,43,226,.28);
     backdrop-filter:blur(15px);
-
     animation:appear .45s ease;
 }
 
@@ -72,14 +61,11 @@ body{
         opacity:0;
         transform:scale(.94) translateY(10px);
     }
-
     to{
         opacity:1;
         transform:scale(1) translateY(0);
     }
 }
-
-/* ---------- TEXT ---------- */
 
 h1,h2{
     color:#dda0ff;
@@ -106,63 +92,38 @@ p{
     margin-bottom:17px;
 }
 
-/* ---------- BUTTON ---------- */
-
 button{
     width:100%;
     border:0;
     border-radius:12px;
-
     padding:13px 18px;
-
     margin-bottom:10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #8a2be2,
-            #ff69b4
-        );
-
+    background:linear-gradient(135deg,#8a2be2,#ff69b4);
     color:white;
-
     font-weight:600;
     font-size:.92rem;
-
     cursor:pointer;
-
     transition:.2s;
 }
 
 button:hover{
     transform:translateY(-2px);
-    box-shadow:
-        0 7px 20px rgba(255,105,180,.3);
+    box-shadow:0 7px 20px rgba(255,105,180,.3);
 }
 
 button:active{
     transform:scale(.98);
 }
 
-/* ---------- INPUT ---------- */
-
 input,
 textarea{
-
     width:100%;
-
     background:#160d22;
-
     border:1px solid #8a2be2;
-
     border-radius:11px;
-
     padding:12px;
-
     color:white;
-
     outline:none;
-
     margin-bottom:12px;
 }
 
@@ -171,385 +132,217 @@ textarea{
     resize:none;
 }
 
-/* ---------- IMAGE ---------- */
-
 #jkImage{
-
     width:100%;
     height:270px;
-
     object-fit:cover;
-
     border-radius:17px;
-
     margin-bottom:16px;
-
     background:#160d22;
-
-    box-shadow:
-        0 0 20px rgba(255,105,180,.2);
+    box-shadow:0 0 20px rgba(255,105,180,.2);
 }
 
-/* ---------- DATE ---------- */
-
 .date{
-
     display:inline-block;
-
     padding:7px 14px;
-
     border-radius:25px;
-
     border:1px solid #a969d8;
-
     color:#e3b3ff;
-
     background:rgba(138,43,226,.12);
-
     font-size:.8rem;
-
     margin-bottom:15px;
 }
 
-/* ---------- COUNTDOWN ---------- */
-
 .countdown{
-
     padding:15px;
-
     margin:18px 0;
-
     border-radius:15px;
-
     background:#10091a;
-
     border:1px solid rgba(255,105,180,.5);
 }
 
 .countTitle{
-
     font-size:.75rem;
-
     color:#c9b4d5;
-
     margin-bottom:7px;
 }
 
 #timer{
-
     color:#ff79c1;
-
     font-weight:700;
-
     font-size:1.02rem;
 }
 
-/* ---------- MUSIC ---------- */
-
 .music{
-
     padding:15px;
-
     margin:18px 0;
-
     border-radius:15px;
-
     background:rgba(138,43,226,.08);
-
     border:1px solid rgba(216,150,255,.3);
 }
 
 .musicStatus{
-
     color:#aaa;
-
     font-size:.7rem;
 }
 
-/* =====================================================
-   ARMY LOVE WALL
-===================================================== */
-
 .army-wall{
-
     margin-top:22px;
-
     padding:18px 12px;
-
     border-radius:20px;
-
     background:
         linear-gradient(
             145deg,
             rgba(138,43,226,.12),
             rgba(255,105,180,.06)
         );
-
     border:1px solid rgba(216,150,255,.35);
-
     overflow:hidden;
 }
 
 .wall-title{
-
     color:#e0a8ff;
-
     font-size:1.05rem;
-
     font-weight:700;
-
     margin-bottom:5px;
 }
 
 .wall-subtitle{
-
     color:#aaa;
-
     font-size:.72rem;
-
     margin-bottom:15px;
 }
 
-
-/* PHOTO SLIDER */
-
 .photo-slider{
-
     position:relative;
-
     width:100%;
-
     height:235px;
-
     overflow:hidden;
-
     border-radius:17px;
+    background:#160d22;
 }
 
 .army-photo{
-
     position:absolute;
-
     inset:0;
-
     width:100%;
     height:100%;
-
     object-fit:cover;
-
     opacity:0;
-
     transform:scale(1.08);
-
     transition:
         opacity 1s ease,
         transform 5s ease;
-
     border-radius:17px;
 }
 
 .army-photo.show{
-
     opacity:1;
-
     transform:scale(1);
 }
 
-
-/* PHOTO NAME */
-
 .photo-name{
-
     margin-top:10px;
-
     color:#e6b6ff;
-
     font-size:.82rem;
-
     font-weight:600;
 }
 
-
-/* MESSAGE */
-
 .army-message{
-
     margin-top:16px;
-
     padding:13px;
-
     border-radius:14px;
-
     background:rgba(0,0,0,.2);
-
     border:1px solid rgba(255,255,255,.08);
 }
 
 .army-message strong{
-
     display:block;
-
     color:#ff91cb;
-
     font-size:.9rem;
-
     margin-bottom:5px;
 }
 
 .army-message span{
-
     color:#ddd;
-
     font-size:.78rem;
-
     line-height:1.5;
 }
 
-
-/* ---------- SURPRISE ---------- */
-
 .surprise{
-
     display:none;
-
     padding:15px;
-
     margin:15px 0;
-
     border-radius:14px;
-
     background:rgba(255,105,180,.08);
-
     border:1px solid rgba(255,105,180,.35);
-
     color:#e9d8f0;
-
     font-size:.82rem;
-
     line-height:1.6;
 }
 
 .surprise.show{
-
     display:block;
-
     animation:appear .4s ease;
 }
 
-
-/* ---------- WISH ---------- */
-
 .wish-preview{
-
     display:none;
-
     padding:13px;
-
     margin:12px 0;
-
     border-radius:12px;
-
     background:#120a1c;
-
     color:#e7c8f5;
-
     font-size:.82rem;
-
     line-height:1.5;
 }
 
-
-/* ---------- AD PLACEHOLDER ---------- */
-
 .ad{
-
     min-height:80px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     margin:20px 0;
-
     border:1px dashed #555;
-
     border-radius:10px;
-
     color:#777;
-
     background:#24222b;
-
     font-size:.72rem;
 }
 
-
-/* ---------- FOOTER ---------- */
-
 .footer{
-
     color:#888;
-
     font-size:.7rem;
-
     line-height:1.7;
-
     margin-top:18px;
 }
 
 .creator{
-
     color:#d896ff;
-
     font-weight:600;
 }
 
-
-/* ---------- INSTAGRAM ---------- */
-
 .insta{
-
     position:fixed;
-
     right:12px;
     bottom:12px;
-
     z-index:20;
-
     color:white;
-
     text-decoration:none;
-
     background:rgba(0,0,0,.7);
-
     border:1px solid #e1306c;
-
     padding:7px 11px;
-
     border-radius:22px;
-
     font-size:.72rem;
-
     backdrop-filter:blur(8px);
 }
 
-
-/* ---------- ERROR ---------- */
-
 .error{
-
     display:none;
-
     color:#ff91aa;
-
     font-size:.75rem;
-
     margin-bottom:8px;
 }
-
-
-/* ---------- MOBILE ---------- */
 
 @media(max-width:380px){
 
@@ -564,27 +357,20 @@ textarea{
     .photo-slider{
         height:210px;
     }
-
 }
-
 </style>
 </head>
-
 
 <body>
 
 <div class="bg"></div>
 
 
-<!-- =====================================================
-     SCREEN 1
-===================================================== -->
+<!-- SCREEN 1 -->
 
 <section id="screen1" class="card active">
 
-    <h1>
-        💜 WELCOME, BTS ARMY 💜
-    </h1>
+    <h1>💜 WELCOME, BTS ARMY 💜</h1>
 
     <p>
         Jungkook's Birthday Celebration
@@ -602,9 +388,7 @@ textarea{
 </section>
 
 
-<!-- =====================================================
-     SCREEN 2
-===================================================== -->
+<!-- SCREEN 2 -->
 
 <section id="screen2" class="card">
 
@@ -631,9 +415,7 @@ textarea{
 </section>
 
 
-<!-- =====================================================
-     SCREEN 3
-===================================================== -->
+<!-- SCREEN 3 -->
 
 <section id="screen3" class="card">
 
@@ -652,9 +434,7 @@ textarea{
 </section>
 
 
-<!-- =====================================================
-     MAIN SCREEN
-===================================================== -->
+<!-- MAIN SCREEN -->
 
 <section id="screen4" class="card">
 
@@ -722,15 +502,13 @@ textarea{
             id="musicStatus"
             class="musicStatus"
         >
-            Tap the button to play 🎶
+            Trying to start music automatically... 🎶
         </div>
 
     </div>
 
 
-    <!-- =================================================
-         ARMY LOVE WALL
-    ================================================= -->
+    <!-- ARMY LOVE WALL -->
 
     <div class="army-wall">
 
@@ -745,55 +523,39 @@ textarea{
 
         <div class="photo-slider">
 
-            <!--
-                YAHAN APNE FRIENDS KE DIRECT IMAGE LINKS
-                LAGANA HAI.
-
-                Example:
-
-                src="https://example.com/friend1.jpg"
-            -->
-
-
             <img
                 class="army-photo show"
-                src="https://drive.google.com/file/d/1k8Z2SIgewgJJRBOM6ZfjTbhUTh9uLrO3/view?usp=drivesdk"
-                alt="☞ Jung Hoseok ☜"
+                src="army1.jpg"
+                alt="ARMY Friend 1"
                 data-name="@hope_world_84"
             >
 
-
             <img
                 class="army-photo"
-                src="https://drive.google.com/file/d/1--nPVbNz44LLAjx5-vtgKdc3X4clCqaQ/view?usp=drivesdk"
-                alt=" Lily _cutei"
+                src="army2.jpg"
+                alt="ARMY Friend 2"
                 data-name="@mishri_sen_"
             >
 
-
             <img
                 class="army-photo"
-                src="https://drive.google.com/file/d/1t0P1jOeTg5aDR77e3bS3qmoRIO-hSHLF/view?usp=drivesdk"
-                alt="• ꜱᴄʀɪᴘᴛᴇʀ ᴛʜᴇ ɢᴇɴɪᴜꜱ 📄"
+                src="army3.jpg"
+                alt="ARMY Friend 3"
                 data-name="@scripter__the.genius"
             >
 
-
             <img
                 class="army-photo"
-                src="https://drive.google.com/file/d/1k_A1b1Aeh5ziFQQWi1TZSxnGIvUM3IC4/view?usp=drivesdk"
-                alt="AASHIQ-E-NAZAR 🥀"
+                src="army4.jpg"
+                alt="ARMY Friend 4"
                 data-name="@hahaaa.fake"
             >
 
         </div>
 
 
-        <div
-            id="photoName"
-            class="photo-name"
-        >
-            ARMY Friend 1 💜
+        <div id="photoName" class="photo-name">
+            @hope_world_84 💜
         </div>
 
 
@@ -814,9 +576,7 @@ textarea{
     </div>
 
 
-    <!-- =================================================
-         SURPRISE
-    ================================================= -->
+    <!-- SURPRISE -->
 
     <button
         onclick="showSurprise()"
@@ -826,10 +586,7 @@ textarea{
     </button>
 
 
-    <div
-        id="surprise"
-        class="surprise"
-    >
+    <div id="surprise" class="surprise">
 
         💜 Dear ARMY,
 
@@ -838,14 +595,14 @@ textarea{
         Different countries, different languages,
         different stories...
 
-        <br>
+        <br><br>
 
         But one thing connects us —
 
-        <br>
+        <br><br>
 
         <strong>
-            our purple heart 💜
+            Our Purple Heart 💜
         </strong>
 
         <br><br>
@@ -856,9 +613,7 @@ textarea{
     </div>
 
 
-    <!-- =================================================
-         WISH BOX
-    ================================================= -->
+    <!-- WISH BOX -->
 
     <h3 style="margin-top:20px;">
         💌 Write Your Birthday Wish
@@ -874,24 +629,17 @@ textarea{
         💜 SHOW MY WISH
     </button>
 
-    <div
-        id="wishPreview"
-        class="wish-preview"
-    ></div>
+    <div id="wishPreview" class="wish-preview"></div>
 
 
-    <!-- =================================================
-         SHARE
-    ================================================= -->
+    <!-- SHARE -->
 
     <button onclick="shareWish()">
         📤 SHARE WITH ARMY
     </button>
 
 
-    <!-- =================================================
-         AD SLOT
-    ================================================= -->
+    <!-- AD -->
 
     <div class="ad">
         ADVERTISEMENT
@@ -937,23 +685,16 @@ textarea{
     target="_blank"
     rel="noopener noreferrer"
 >
-    📷 ARMY FOLLOW US 
+    📷 @hahaaa.fake
 </a>
 
 
-<!-- =====================================================
-     MUSIC FILE
-
-     GitHub repository mein:
-     birthday.mp3
-
-     upload karo.
-===================================================== -->
+<!-- MUSIC FILE -->
 
 <audio
     id="birthdayMusic"
     loop
-    preload="none"
+    preload="auto"
 >
 
     <source
@@ -966,9 +707,7 @@ textarea{
 
 <script>
 
-/* =====================================================
-   SETTINGS
-===================================================== */
+/* SETTINGS */
 
 const birthdayDate =
     new Date("2026-09-01T00:00:00+05:30");
@@ -976,9 +715,7 @@ const birthdayDate =
 let armyName = "";
 
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+/* NAVIGATION */
 
 function next(from,to){
 
@@ -997,9 +734,7 @@ function next(from,to){
 }
 
 
-/* =====================================================
-   NAME
-===================================================== */
+/* NAME */
 
 function saveName(){
 
@@ -1031,7 +766,7 @@ function saveName(){
 
     document
         .getElementById("welcomeName")
-        .textContent=
+        .textContent =
         "Thank you for visiting, "
         + armyName
         + " 💜";
@@ -1042,9 +777,7 @@ function saveName(){
 }
 
 
-/* =====================================================
-   OPEN BIRTHDAY
-===================================================== */
+/* OPEN BIRTHDAY + AUTO MUSIC */
 
 function openBirthday(){
 
@@ -1065,14 +798,35 @@ function openBirthday(){
 
         });
 
+
+        /* TRY AUTOPLAY */
+
+        music.play()
+
+        .then(function(){
+
+            musicBtn.textContent =
+                "⏸️ PAUSE MUSIC";
+
+            musicStatus.textContent =
+                "Birthday music is playing 🎶💜";
+
+        })
+
+        .catch(function(){
+
+            musicStatus.textContent =
+                "Tap PLAY MUSIC to start 🎵💜";
+
+        });
+
+
     },300);
 
 }
 
 
-/* =====================================================
-   COUNTDOWN
-===================================================== */
+/* COUNTDOWN */
 
 function updateTimer(){
 
@@ -1088,7 +842,7 @@ function updateTimer(){
 
     if(diff<=0){
 
-        timer.innerHTML=
+        timer.innerHTML =
             "🎂 HAPPY BIRTHDAY JK! 💜";
 
         return;
@@ -1120,23 +874,20 @@ function updateTimer(){
         );
 
 
-    timer.textContent=
-        days+" DAYS : "+
-        String(hours).padStart(2,"0")+" H : "+
-        String(minutes).padStart(2,"0")+" M : "+
-        String(seconds).padStart(2,"0")+" S";
+    timer.textContent =
+        days+" DAYS : "
+        +String(hours).padStart(2,"0")+" H : "
+        +String(minutes).padStart(2,"0")+" M : "
+        +String(seconds).padStart(2,"0")+" S";
 
 }
-
 
 setInterval(updateTimer,1000);
 
 updateTimer();
 
 
-/* =====================================================
-   MUSIC
-===================================================== */
+/* MUSIC */
 
 const music =
     document.getElementById("birthdayMusic");
@@ -1156,18 +907,18 @@ async function toggleMusic(){
 
             await music.play();
 
-            musicBtn.textContent=
+            musicBtn.textContent =
                 "⏸️ PAUSE MUSIC";
 
-            musicStatus.textContent=
+            musicStatus.textContent =
                 "Birthday music is playing 🎶💜";
 
         }
 
         catch(error){
 
-            musicStatus.textContent=
-                "Music file not found. Upload birthday.mp3 to GitHub.";
+            musicStatus.textContent =
+                "Music file not found. Check birthday.mp3.";
 
         }
 
@@ -1177,10 +928,10 @@ async function toggleMusic(){
 
         music.pause();
 
-        musicBtn.textContent=
+        musicBtn.textContent =
             "▶️ PLAY MUSIC";
 
-        musicStatus.textContent=
+        musicStatus.textContent =
             "Music paused 🎵";
 
     }
@@ -1188,9 +939,7 @@ async function toggleMusic(){
 }
 
 
-/* =====================================================
-   ARMY PHOTO SLIDER
-===================================================== */
+/* PHOTO SLIDER */
 
 const armyPhotos =
     document.querySelectorAll(".army-photo");
@@ -1198,7 +947,7 @@ const armyPhotos =
 const photoName =
     document.getElementById("photoName");
 
-let currentPhoto=0;
+let currentPhoto = 0;
 
 
 function showArmyPhoto(index){
@@ -1210,13 +959,11 @@ function showArmyPhoto(index){
     });
 
 
-    armyPhotos[index]
-        .classList.add("show");
+    armyPhotos[index].classList.add("show");
 
 
     photoName.textContent =
-        armyPhotos[index]
-        .dataset.name
+        armyPhotos[index].dataset.name
         + " 💜";
 
 }
@@ -1237,9 +984,7 @@ setInterval(function(){
 },4000);
 
 
-/* =====================================================
-   SURPRISE
-===================================================== */
+/* SURPRISE */
 
 function showSurprise(){
 
@@ -1269,9 +1014,7 @@ function showSurprise(){
 }
 
 
-/* =====================================================
-   WISH
-===================================================== */
+/* WISH */
 
 function showWish(){
 
@@ -1283,8 +1026,7 @@ function showWish(){
 
 
     const preview =
-        document
-        .getElementById("wishPreview");
+        document.getElementById("wishPreview");
 
 
     if(!text){
@@ -1297,8 +1039,7 @@ function showWish(){
 
 
     preview.textContent =
-        "💜 "
-        + text;
+        "💜 " + text;
 
 
     preview.style.display="block";
@@ -1306,9 +1047,7 @@ function showWish(){
 }
 
 
-/* =====================================================
-   SHARE
-===================================================== */
+/* SHARE */
 
 async function shareWish(){
 
@@ -1316,7 +1055,7 @@ async function shareWish(){
         window.location.href;
 
 
-    const data={
+    const data = {
 
         title:
             "Jungkook Birthday Celebration 💜",
@@ -1342,7 +1081,7 @@ async function shareWish(){
 
         catch(error){
 
-            if(error.name==="AbortError"){
+            if(error.name === "AbortError"){
 
                 return;
 
@@ -1356,7 +1095,6 @@ async function shareWish(){
     try{
 
         await navigator.clipboard.writeText(url);
-
 
         alert(
             "💜 Website link copied!\n"+
@@ -1377,9 +1115,7 @@ async function shareWish(){
 }
 
 
-/* =====================================================
-   ENTER KEY
-===================================================== */
+/* ENTER KEY */
 
 document
     .getElementById("name")
@@ -1387,7 +1123,7 @@ document
         "keydown",
         function(event){
 
-            if(event.key==="Enter"){
+            if(event.key === "Enter"){
 
                 saveName();
 
