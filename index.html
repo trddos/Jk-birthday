@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jungkook Birthday Celebration 💜</title>
+<meta name="description" content="A fan-made Jungkook birthday celebration for BTS ARMY. 💜">
 
+<!-- ================= GOOGLE ADSENSE ================= -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2326524023213212"
+crossorigin="anonymous"></script>
+
+<!-- CONFETTI -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <!-- PNG CARD GENERATOR -->
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 *{
@@ -19,6 +27,10 @@
     padding:0;
     box-sizing:border-box;
     font-family:Poppins,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -176,7 +188,7 @@ textarea::placeholder{
     font-size:.76rem;
 }
 
-/* JK IMAGE */
+/* ================= JK IMAGE ================= */
 
 .jk-image{
     width:100%;
@@ -188,7 +200,25 @@ textarea::placeholder{
     box-shadow:0 0 28px rgba(255,80,180,.2);
 }
 
-/* COUNTDOWN */
+/* ================= ADSENSE ================= */
+
+.ad-container{
+    width:100%;
+    max-width:100%;
+    margin:22px 0;
+    padding:8px 0;
+    text-align:center;
+    overflow:hidden;
+}
+
+.ad-label{
+    color:#777;
+    font-size:.58rem;
+    margin-bottom:5px;
+    text-align:center;
+}
+
+/* ================= COUNTDOWN ================= */
 
 .countdown{
     padding:16px;
@@ -211,7 +241,7 @@ textarea::placeholder{
     font-weight:800;
 }
 
-/* MUSIC */
+/* ================= MUSIC ================= */
 
 .music-box{
     padding:16px;
@@ -227,7 +257,7 @@ textarea::placeholder{
     font-size:.7rem;
 }
 
-/* FRIENDS */
+/* ================= ARMY WALL ================= */
 
 .army-wall{
     padding:17px 12px;
@@ -308,7 +338,7 @@ textarea::placeholder{
     line-height:1.5;
 }
 
-/* VISITORS */
+/* ================= VISITORS ================= */
 
 .visitors{
     margin-top:22px;
@@ -394,7 +424,7 @@ textarea::placeholder{
     font-size:.66rem;
 }
 
-/* SURPRISE */
+/* ================= SURPRISE ================= */
 
 .surprise{
     display:none;
@@ -414,7 +444,7 @@ textarea::placeholder{
     animation:appear .4s ease;
 }
 
-/* WISH */
+/* ================= WISH ================= */
 
 .wish-preview{
     display:none;
@@ -428,7 +458,7 @@ textarea::placeholder{
     word-break:break-word;
 }
 
-/* INSTAGRAM */
+/* ================= INSTAGRAM ================= */
 
 .instagram-box{
     margin:22px 0;
@@ -474,7 +504,7 @@ textarea::placeholder{
     margin-bottom:12px;
 }
 
-/* CARD PREVIEW */
+/* ================= PERSONAL CARD ================= */
 
 .card-section{
     margin-top:23px;
@@ -494,8 +524,6 @@ textarea::placeholder{
     font-size:.68rem;
     margin-bottom:14px;
 }
-
-/* GENERATED CARD */
 
 #birthdayCard{
     width:100%;
@@ -589,7 +617,7 @@ textarea::placeholder{
     background:linear-gradient(135deg,#6d2bd9,#c832a5);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 .footer{
     text-align:center;
@@ -626,6 +654,7 @@ textarea::placeholder{
         min-height:450px;
     }
 }
+
 </style>
 </head>
 
@@ -634,7 +663,9 @@ textarea::placeholder{
 <div class="particles"></div>
 
 
-<!-- ================= SCREEN 1 ================= -->
+<!-- ==================================================
+SCREEN 1
+================================================== -->
 
 <section id="screen1" class="card active">
 
@@ -656,7 +687,9 @@ textarea::placeholder{
 </section>
 
 
-<!-- ================= SCREEN 2 ================= -->
+<!-- ==================================================
+SCREEN 2
+================================================== -->
 
 <section id="screen2" class="card">
 
@@ -694,7 +727,9 @@ textarea::placeholder{
 </section>
 
 
-<!-- ================= SCREEN 3 ================= -->
+<!-- ==================================================
+SCREEN 3
+================================================== -->
 
 <section id="screen3" class="card">
 
@@ -714,7 +749,9 @@ textarea::placeholder{
 </section>
 
 
-<!-- ================= MAIN ================= -->
+<!-- ==================================================
+MAIN SCREEN
+================================================== -->
 
 <section id="screen4" class="card">
 
@@ -724,8 +761,6 @@ textarea::placeholder{
         🎂 1 SEPTEMBER 2026 🎂
     </div>
 
-
-    <!-- JK MAIN IMAGE -->
 
     <img
         class="jk-image"
@@ -743,6 +778,28 @@ textarea::placeholder{
         with love, happiness and purple hearts
         from ARMY around the world. ✨
     </p>
+
+
+    <!-- ==================================================
+    ADSENSE
+    ================================================== -->
+
+    <div class="ad-container">
+
+        <div class="ad-label">
+            Advertisement
+        </div>
+
+        <ins
+            class="adsbygoogle"
+            style="display:block;width:100%;min-height:90px"
+            data-ad-client="ca-pub-2326524023213212"
+            data-ad-slot="2630339207"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins>
+
+    </div>
 
 
     <!-- COUNTDOWN -->
@@ -769,17 +826,17 @@ textarea::placeholder{
         </p>
 
         <button id="musicBtn" onclick="toggleMusic()">
-            ⏸️ MUSIC
+            ▶️ PLAY MUSIC
         </button>
 
         <div id="musicStatus" class="music-status">
-            Birthday music is playing 🎶💜
+            Tap MUSIC to start 🎶💜
         </div>
 
     </div>
 
 
-    <!-- ================= 4 FRIENDS ================= -->
+    <!-- ARMY LOVE WALL -->
 
     <div class="army-wall">
 
@@ -843,7 +900,7 @@ textarea::placeholder{
     </div>
 
 
-    <!-- ================= VISITOR WALL ================= -->
+    <!-- VISITOR WALL -->
 
     <div class="visitors">
 
@@ -858,9 +915,13 @@ textarea::placeholder{
         <div id="visitorList" class="visitor-list">
 
             <div class="visitor">
-                <div class="avatar">A</div>
+
+                <div class="avatar">
+                    A
+                </div>
 
                 <div class="visitor-info">
+
                     <div class="visitor-name">
                         Loading...
                     </div>
@@ -868,7 +929,9 @@ textarea::placeholder{
                     <div class="visitor-username">
                         @army
                     </div>
+
                 </div>
+
             </div>
 
         </div>
@@ -876,7 +939,7 @@ textarea::placeholder{
     </div>
 
 
-    <!-- ================= PERSONAL CARD ================= -->
+    <!-- PERSONAL CARD -->
 
     <div class="card-section">
 
@@ -913,15 +976,13 @@ textarea::placeholder{
 
                 <div
                     id="cardVisitorName"
-                    class="card-user"
-                >
+                    class="card-user">
                     ARMY
                 </div>
 
                 <div
                     id="cardVisitorUsername"
-                    class="card-username"
-                >
+                    class="card-username">
                     @army
                 </div>
 
@@ -943,8 +1004,7 @@ textarea::placeholder{
 
         <button
             class="download-btn"
-            onclick="downloadCard()"
-        >
+            onclick="downloadCard()">
             📥 DOWNLOAD MY BIRTHDAY CARD PNG
         </button>
 
@@ -955,12 +1015,31 @@ textarea::placeholder{
     </div>
 
 
-    <!-- ================= SURPRISE ================= -->
+    <!-- SECOND ADSENSE -->
+
+    <div class="ad-container">
+
+        <div class="ad-label">
+            Advertisement
+        </div>
+
+        <ins
+            class="adsbygoogle"
+            style="display:block;width:100%;min-height:90px"
+            data-ad-client="ca-pub-2326524023213212"
+            data-ad-slot="2630339207"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins>
+
+    </div>
+
+
+    <!-- SURPRISE -->
 
     <button
         style="margin-top:22px"
-        onclick="showSurprise()"
-    >
+        onclick="showSurprise()">
         🎁 OPEN SPECIAL SURPRISE
     </button>
 
@@ -992,7 +1071,7 @@ textarea::placeholder{
     </div>
 
 
-    <!-- ================= WISH ================= -->
+    <!-- WISH -->
 
     <h3 style="margin-top:23px">
         💌 WRITE YOUR BIRTHDAY WISH
@@ -1001,8 +1080,7 @@ textarea::placeholder{
     <textarea
         id="wish"
         maxlength="250"
-        placeholder="Write something for Jungkook..."
-    ></textarea>
+        placeholder="Write something for Jungkook..."></textarea>
 
     <button onclick="showWish()">
         💜 SHOW MY WISH
@@ -1010,11 +1088,11 @@ textarea::placeholder{
 
     <div
         id="wishPreview"
-        class="wish-preview"
-    ></div>
+        class="wish-preview">
+    </div>
 
 
-    <!-- ================= INSTAGRAM ================= -->
+    <!-- INSTAGRAM -->
 
     <div class="instagram-box">
 
@@ -1037,14 +1115,14 @@ textarea::placeholder{
     </div>
 
 
-    <!-- ================= SHARE ================= -->
+    <!-- SHARE -->
 
     <button onclick="shareWebsite()">
         📤 SHARE WITH MORE ARMY
     </button>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
 
     <div class="footer">
 
@@ -1075,17 +1153,21 @@ textarea::placeholder{
 </section>
 
 
-<!-- ================= MUSIC ================= -->
+<!-- ==================================================
+MUSIC
+================================================== -->
 
 <audio
     id="birthdayMusic"
     src="birthday.mp3"
     loop
-    preload="auto"
-></audio>
+    preload="auto">
+</audio>
 
 
-<!-- ================= FIREBASE ================= -->
+<!-- ==================================================
+FIREBASE
+================================================== -->
 
 <script type="module">
 
@@ -1103,10 +1185,6 @@ import {
     onValue
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
-
-/* ==========================================
-   FIREBASE CONFIG
-========================================== */
 
 const firebaseConfig = {
 
@@ -1133,18 +1211,12 @@ const firebaseConfig = {
 };
 
 
-/* ==========================================
-   FIREBASE START
-========================================== */
-
 const app = initializeApp(firebaseConfig);
 
 const db = getDatabase(app);
 
 
-/* ==========================================
-   SAVE VISITOR
-========================================== */
+/* ================= SAVE VISITOR ================= */
 
 window.saveVisitor = async function(){
 
@@ -1169,6 +1241,7 @@ window.saveVisitor = async function(){
         error.style.display="block";
 
         return;
+
     }
 
 
@@ -1195,7 +1268,6 @@ window.saveVisitor = async function(){
 
 
         window.armyVisitorName=name;
-
         window.armyVisitorUsername=username;
 
 
@@ -1204,8 +1276,6 @@ window.saveVisitor = async function(){
         .textContent=
         "Welcome, "+name+" 💜";
 
-
-        /* UPDATE PERSONAL CARD */
 
         document
         .getElementById("cardVisitorName")
@@ -1245,9 +1315,7 @@ window.saveVisitor = async function(){
 };
 
 
-/* ==========================================
-   LOAD VISITORS
-========================================== */
+/* ================= LOAD VISITORS ================= */
 
 const visitorQuery =
     query(
@@ -1258,20 +1326,23 @@ const visitorQuery =
 
 
 onValue(
+
     visitorQuery,
 
     function(snapshot){
 
         const list =
-            document.getElementById("visitorList");
+            document.getElementById(
+                "visitorList"
+            );
 
         list.innerHTML="";
 
 
         if(!snapshot.exists()){
 
-            list.innerHTML=
-            `
+            list.innerHTML=`
+
             <div class="visitor">
 
                 <div class="avatar">
@@ -1291,9 +1362,11 @@ onValue(
                 </div>
 
             </div>
+
             `;
 
             return;
+
         }
 
 
@@ -1354,11 +1427,9 @@ onValue(
 
 
             info.appendChild(name);
-
             info.appendChild(username);
 
             box.appendChild(avatar);
-
             box.appendChild(info);
 
             list.appendChild(box);
@@ -1376,40 +1447,48 @@ onValue(
 
         document
         .getElementById("visitorList")
-        .innerHTML=
-        `
+        .innerHTML=`
+
         <div class="visitor">
-            <div class="avatar">!</div>
+
+            <div class="avatar">
+                !
+            </div>
+
             <div class="visitor-info">
+
                 <div class="visitor-name">
                     Visitors temporarily unavailable
                 </div>
+
                 <div class="visitor-username">
                     Please try again later 💜
                 </div>
+
             </div>
+
         </div>
+
         `;
 
     }
+
 );
 
 </script>
 
 
-<script>
+<!-- ==================================================
+MAIN JAVASCRIPT
+================================================== -->
 
-/* ==========================================
-   GLOBAL
-========================================== */
+<script>
 
 let armyVisitorName="";
 let armyVisitorUsername="";
 
 
-/* ==========================================
-   NAVIGATION
-========================================== */
+/* ================= NAVIGATION ================= */
 
 function nextScreen(from,to){
 
@@ -1441,32 +1520,16 @@ function nextScreen(from,to){
 }
 
 
-/* ==========================================
-   ENTER
-========================================== */
+/* ================= ENTER ================= */
 
 function enterArmy(){
 
     nextScreen(1,2);
 
-
-    /*
-       Browser audio autoplay policy:
-       This click counts as user interaction.
-       Music will try to start here.
-    */
-
-    setTimeout(
-        startMusic,
-        300
-    );
-
 }
 
 
-/* ==========================================
-   OPEN BIRTHDAY
-========================================== */
+/* ================= OPEN BIRTHDAY ================= */
 
 function openBirthday(){
 
@@ -1474,8 +1537,6 @@ function openBirthday(){
 
 
     setTimeout(function(){
-
-        startMusic();
 
         confetti({
 
@@ -1485,14 +1546,59 @@ function openBirthday(){
 
         });
 
+        initializeAds();
+
     },350);
 
 }
 
 
-/* ==========================================
-   MUSIC
-========================================== */
+/* ================= ADSENSE ================= */
+
+function initializeAds(){
+
+    try{
+
+        const ads =
+            document.querySelectorAll(
+                ".adsbygoogle"
+            );
+
+
+        ads.forEach(function(ad){
+
+            if(
+                ad.getAttribute(
+                    "data-adsbygoogle-status"
+                )
+            ){
+
+                return;
+
+            }
+
+
+            (window.adsbygoogle =
+                window.adsbygoogle || [])
+                .push({});
+
+        });
+
+    }
+
+    catch(error){
+
+        console.log(
+            "AdSense:",
+            error
+        );
+
+    }
+
+}
+
+
+/* ================= MUSIC ================= */
 
 const music =
     document.getElementById(
@@ -1527,7 +1633,7 @@ async function startMusic(){
     catch(error){
 
         musicStatus.textContent=
-            "Tap MUSIC once to start 🎶💜";
+            "Tap MUSIC to start 🎶💜";
 
     }
 
@@ -1557,9 +1663,7 @@ async function toggleMusic(){
 }
 
 
-/* ==========================================
-   COUNTDOWN
-========================================== */
+/* ================= COUNTDOWN ================= */
 
 const birthdayDate =
     new Date(
@@ -1636,9 +1740,7 @@ setInterval(
 updateTimer();
 
 
-/* ==========================================
-   FRIEND SLIDER
-========================================== */
+/* ================= FRIEND SLIDER ================= */
 
 const armyPhotos =
     document.querySelectorAll(
@@ -1683,6 +1785,7 @@ setInterval(function(){
 
     currentPhoto++;
 
+
     if(
         currentPhoto>=
         armyPhotos.length
@@ -1700,9 +1803,7 @@ setInterval(function(){
 },4000);
 
 
-/* ==========================================
-   SURPRISE
-========================================== */
+/* ================= SURPRISE ================= */
 
 function showSurprise(){
 
@@ -1732,9 +1833,7 @@ function showSurprise(){
 }
 
 
-/* ==========================================
-   WISH
-========================================== */
+/* ================= WISH ================= */
 
 function showWish(){
 
@@ -1745,8 +1844,7 @@ function showWish(){
         .trim();
 
     const preview =
-        document
-        .getElementById(
+        document.getElementById(
             "wishPreview"
         );
 
@@ -1768,9 +1866,7 @@ function showWish(){
 }
 
 
-/* ==========================================
-   DOWNLOAD PERSONAL CARD
-========================================== */
+/* ================= DOWNLOAD CARD ================= */
 
 async function downloadCard(){
 
@@ -1834,7 +1930,6 @@ async function downloadCard(){
 
         link.click();
 
-
     }
 
     catch(error){
@@ -1854,9 +1949,7 @@ async function downloadCard(){
 }
 
 
-/* ==========================================
-   SHARE CARD
-========================================== */
+/* ================= SHARE CARD ================= */
 
 async function shareCard(){
 
@@ -1904,8 +1997,7 @@ async function shareCard(){
             .writeText(url);
 
             alert(
-                "Website link copied! 💜\n"+
-                "Ab Instagram Story/WhatsApp par share kar do."
+                "Website link copied! 💜"
             );
 
         }
@@ -1924,9 +2016,7 @@ async function shareCard(){
 }
 
 
-/* ==========================================
-   SHARE WEBSITE
-========================================== */
+/* ================= SHARE WEBSITE ================= */
 
 async function shareWebsite(){
 
@@ -1995,9 +2085,7 @@ async function shareWebsite(){
 }
 
 
-/* ==========================================
-   INSTAGRAM
-========================================== */
+/* ================= INSTAGRAM ================= */
 
 function followInstagram(){
 
@@ -2008,6 +2096,42 @@ function followInstagram(){
     );
 
 }
+
+</script>
+
+
+<!-- ==================================================
+INITIAL ADSENSE LOAD
+================================================== -->
+
+<script>
+
+window.addEventListener(
+    "load",
+    function(){
+
+        /*
+        AdSense is initialized only when
+        the main celebration screen is visible.
+        */
+
+        const main =
+            document.getElementById(
+                "screen4"
+            );
+
+
+        if(
+            main &&
+            main.classList.contains("active")
+        ){
+
+            initializeAds();
+
+        }
+
+    }
+);
 
 </script>
 
